@@ -1,0 +1,31 @@
+.header {
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+}
+
+.header__gradient {
+    width: 100vw!important;
+}
+
+.header__gradient__left {
+    background: url('../img/gradient_left.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    outline: 1px solid red;
+    height: 500px;
+    position: absolute;
+}
+
+.header__gradient__right {
+    background: url('../img/gradient_right.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    outline: 1px solid black;
+    height: 500px;
+    position: absolute;
+    
+}
