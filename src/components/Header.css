@@ -1,31 +1,57 @@
-.header {
+.homepage__header {
     margin: 0;
     padding:0;
     width: 100%;
     height: 100%;
 }
 
-.header__gradient {
-    width: 100vw!important;
+.homepage__gradient {
+    height: 500px;
+    background:url(../img/bg-icon.svg) center bottom 20px/130% no-repeat,
+    url(../img/gradient_right.png) top 40% right 20% no-repeat,
+    url(../img/gradient_left.png) bottom -50% left 10% no-repeat
+
 }
 
-.header__gradient__left {
-    background: url('../img/gradient_left.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    outline: 1px solid red;
-    height: 500px;
-    position: absolute;
+.homepage__logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.header__gradient__right {
-    background: url('../img/gradient_right.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    outline: 1px solid black;
-    height: 500px;
-    position: absolute;
-    
+.homepage__logo-box h2, h3 {
+    margin-bottom: 25px;
 }
+
+
+.homepage__logo-box__img {
+    width: 250px;
+    margin: 50px 0 50px
+}
+
+.homepage__logo-box-text {
+    margin-top: -15px;
+    color:rgb(74, 137, 255);
+}
+/* 
+.header__gradient__box {
+    display: grid;
+    height: 100%;
+}
+
+.header__gradient__img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+} 
+
+.header__gradient__img--right {
+    position: absolute;
+    top:0;
+}
+
+.header__gradient__img--left {
+    position: absolute;
+    top:-30px
+} */

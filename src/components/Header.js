@@ -1,20 +1,21 @@
-import gradientLeft from '../img/gradient_left.png'
-import gradientRight from '../img/gradient_right.png'
+import logo from '../img/furgonetka_pl_logo.png'
+import Form from './Form'
 import './Header.css'
 
 
 
 export default function Header() {
     return (
-        <div className="header">
-            <div className="header__gradient">
-                <div className="header__gradient__left">
-                    {/* <img src={gradientLeft} alt="gradient left" className="header__gradient__img"/>      */}
-                </div>
-                <div className="header__gradient__right">
-                    {/* <img src={gradientRight} alt="gradient right" className="header__gradient__img"/>   */}
-                </div>
+        <header className="homepage__header">
+            <div className="homepage__gradient"> 
+                <div className="homepage__logo-box">
+                    <img src={logo} alt="logo" className="homepage__logo-box__img"/>
+                    <h2>Zarejestruj się i zostań naszym partnerem VIP</h2>
+                    <h3>Przesyłki dla Twoich klientów juz od 8 zł</h3>
+                    <h3 className="homepage__logo-box-text">Udostępnij najlepszą ofertę na rynku i dodatkowo zarabiaj</h3>
+                </div> 
+                <Form />       
             </div>
-        </div>
+        </header>
     )
 }
