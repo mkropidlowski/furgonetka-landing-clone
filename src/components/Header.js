@@ -14,7 +14,8 @@ export default function Header() {
                     <h3>Przesyłki dla Twoich klientów juz od 8 zł</h3>
                     <h3 className="homepage__logo-box-text">Udostępnij najlepszą ofertę na rynku i dodatkowo zarabiaj</h3>
                 </div> 
-                <Form />       
+                <Form /> 
+             
             </div>
         </header>
     )

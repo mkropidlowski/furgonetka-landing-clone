@@ -2,15 +2,19 @@
     margin: 0;
     padding:0;
     width: 100%;
-    height: 100%;
+    height: 60vh;
+    background:linear-gradient(to top,#f3f3f3,#ffffff);
+    
+
+
 }
 
 .homepage__gradient {
-    height: 500px;
-    background:url(../img/bg-icon.svg) center bottom 20px/130% no-repeat,
+    height: 100%;
+    background:
     url(../img/gradient_right.png) top 40% right 20% no-repeat,
-    url(../img/gradient_left.png) bottom -50% left 10% no-repeat
-
+    url(../img/gradient_left.png) bottom -80% left 10% no-repeat;
+   
 }
 
 .homepage__logo-box {
@@ -26,32 +30,51 @@
 
 
 .homepage__logo-box__img {
-    width: 250px;
-    margin: 50px 0 50px
+    width: 180px;
+    margin: 5px 0 50px
 }
 
 .homepage__logo-box-text {
     margin-top: -15px;
-    color:rgb(74, 137, 255);
-}
-/* 
-.header__gradient__box {
-    display: grid;
-    height: 100%;
+    color:rgb(55, 119, 238);
 }
 
-.header__gradient__img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-} 
+@media only screen and (max-width: 1200px) {
+    .homepage__gradient {
+        background:linear-gradient(to top,#f3f3f3,#ffffff);
+    }
+  }
 
-.header__gradient__img--right {
-    position: absolute;
-    top:0;
-}
+@media only screen and (max-width: 600px) {
+    .join-to__header {
+        width: 80%;
+    }
+    .homepage__header {
+        height: 70vh;
+    }
 
-.header__gradient__img--left {
-    position: absolute;
-    top:-30px
-} */
+  }
+  
+@media only screen and (max-width:500px) {
+    .join-to__header {
+        width: 80%;
+    }
+
+    .homepage__logo-box {
+        text-align: center;
+        margin:10px 25px 10px;
+    }
+    .homepage__header {
+        height: 80vh;
+    }
+
+  }
+
+    
+@media only screen and (max-width:400px) {
+  
+    .homepage__header {
+        height: 100vh;
+    }
+
+  }

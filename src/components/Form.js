@@ -15,11 +15,11 @@ export default function Form() {
     return (
         <div className="form__container">
 
-            <div className="form__container__nav">
+            <div className="form__nav">
                 <h3>Zacznij zarabiać w 5 minut</h3>
-                <p>Zarejestruj się w minutę i sprawdź, jak to działa</p>
+                <p className="form__register-info">Zarejestruj się w minutę i sprawdź, jak to działa</p>
             </div>
-            <form onSubmit={handleSubmit} className="form__container-login">
+            <form onSubmit={handleSubmit} className="form__login">
                 <label>
                         <input 
                             type="text"
@@ -38,8 +38,8 @@ export default function Form() {
                             placeholder="Hasło"
                         />
                     </label>
-                    <p className="form__container-login-pass-decription">Użyj od 6 do 24 znaków. Nie używaj łatwych sekwencji, np "123456".</p>
-                    <button className="form__container-login-btn">Załóż darmowe konto</button>
+                    <p className="form__login-pass-decription">Użyj od 6 do 24 znaków. Nie używaj łatwych sekwencji, np "123456".</p>
+                    <button className="form__login-btn">Załóż darmowe konto</button>
             </form>
         </div>
     )
