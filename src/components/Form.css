@@ -37,6 +37,7 @@
     border: 1px solid lightgrey; 
     padding-left: 15px;
     margin-top: 30px;
+    
 }
 
 .form__login input:focus {
@@ -65,6 +66,27 @@
     cursor: pointer;
 }
 
+.form__error {
+    padding: 5px;
+    color:rgb(231, 57, 57);
+}
+
+.form__hidden-eye
+{
+    position: relative;
+    top:4px;
+    left: -30px;
+
+}
+
+.form__input-password {
+    position: relative;
+    left: 8px;
+}
+
+.form__hidden-eye:hover {
+    cursor: pointer;
+}
 
   
 @media only screen and (max-width:500px) {
@@ -87,6 +109,17 @@
         width: 250px;
         padding: 10px;
     }
-    
+    .form__hidden-eye
+    {
+    position: relative;
+    top:-32px;
+    left: 100px;
+
+    }
+
+    .form__input-password {
+    position: relative;
+    left: 0px;
+    }
 
 }

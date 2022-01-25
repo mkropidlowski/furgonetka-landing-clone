@@ -7,9 +7,36 @@ import ic_rev from '../img/ic-reviews-bg.svg'
 import ic_client from '../img/ic-satisfied-clients-bg.svg'
 import ic_parcels from '../img/ic-parcels-bg.svg'
 
+import CountUp from 'react-countup'
+import { useEffect, useState } from "react";
 
-export default function Header() {
+export default function About() {
+
+    const [isVisible, setIsVisible] = useState(true);
+  
+    useEffect(() => {   
+      window.addEventListener("scroll", listenToScroll);
+
+      return () => 
+         window.removeEventListener("scroll", listenToScroll); 
+    
+    }, [])
+    
+    const listenToScroll = () => {
+
+      let heightToHideFrom = 500;
+      const winScroll = document.body.scrollTop || 
+          document.documentElement.scrollTop;
+          if (winScroll > heightToHideFrom ) {  
+            isVisible && setIsVisible(true);
+        } else {
+                setIsVisible(false);
+        }
+
+        }
+    
     return (
+        
         <section className="about">
                 <div className="custom-shape-divider-top-1643029172">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -37,26 +64,27 @@ export default function Header() {
                     </div>
                 </div>
 
-
+           
+            
                 <div className="statistics">
                     <div className="statistics__box">
                         <img src={ic_exp} alt="ic experience" />
-                        <h2 className="statistics__number">9</h2>
+                        <h2 className="statistics__number">{ isVisible && <CountUp start={0} end={9} delay={0.5}/>}</h2>
                         <h3 className="statistics__desc">lat doświadczenia</h3>
                     </div>
                     <div className="statistics__box">
                         <img src={ic_rev} alt="ic experience" />
-                        <h2 className="statistics__number">870 000</h2>
+                        <h2 className="statistics__number">{ isVisible && <CountUp start={0} end={870} delay={0.5}/>} tysięcy</h2>
                         <h3 className="statistics__desc">zadowolonych klientów</h3>
                     </div>
                     <div className="statistics__box">
                         <img src={ic_client} alt="ic experience" />
-                        <h2 className="statistics__number">55 000</h2>
+                        <h2 className="statistics__number">{ isVisible && <CountUp start={0} end={55} delay={0.5}/>} tysięcy</h2>
                         <h3 className="statistics__desc">pozytywnych opinii na Opineo.pl</h3>
                     </div>
                     <div className="statistics__box">
                         <img src={ic_parcels} alt="ic experience" />
-                        <h2 className="statistics__number">25 000 000</h2>
+                        <h2 className="statistics__number">{ isVisible && <CountUp start={0} end={25} delay={0.5}/>} milionów</h2>
                         <h3 className="statistics__desc">nadanych przesyłek</h3>
                     </div>
                 </div>
@@ -66,6 +94,8 @@ export default function Header() {
                     <button className="join-to__btn">Załóż darmowe konto</button>
 
                 </div>
+
+               
 
             </div>
         </section>
