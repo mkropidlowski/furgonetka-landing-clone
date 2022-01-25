@@ -168,6 +168,10 @@
     .statistics__box {
         margin-top: 30px;
     }
+
+    .join-to__btn {
+        width:250px;
+    }
     
   }
 
